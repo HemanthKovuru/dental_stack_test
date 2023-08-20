@@ -24,7 +24,6 @@ const App = () => {
   };
   return (
     <div>
-      <button>Add proudct</button>
       <table>
         <thead>
           <tr>
