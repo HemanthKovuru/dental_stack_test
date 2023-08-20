@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts, deleteProduct } from "./redux/productsSlice";
+import ProductForm from "./components/ProductForm";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const App = () => {
           ))}
         </tbody>
       </table>
+      <ProductForm />
     </div>
   );
 };

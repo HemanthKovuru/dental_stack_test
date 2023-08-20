@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Product {
   id: number;
-  name: string;
+  title: string;
   price: number;
 }
 
@@ -22,7 +22,9 @@ const productsSlice = createSlice({
       state.products = action.payload;
     },
     addProduct: (state, action: PayloadAction<Product>) => {
-      state.products.push(action.payload);
+      console.log(action.payload);
+
+      state.products = [...state.products, action.payload];
     },
     updateProduct: (state, action: PayloadAction<Product>) => {
       const index = state.products.findIndex((p) => p.id === action.payload.id);
