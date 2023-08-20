@@ -69,8 +69,7 @@ const App = () => {
             <tr key={product.id}>
               <td>{product.id}</td>
               <td>
-                {product.title}
-                {showInput === product.id && (
+                {showInput === product.id ? (
                   <input
                     name="title"
                     type="text"
@@ -79,11 +78,12 @@ const App = () => {
                       setTitle(e.target.value)
                     }
                   />
+                ) : (
+                  product.title
                 )}
               </td>
               <td>
-                {product.price}{" "}
-                {showInput === product.id && (
+                {showInput === product.id ? (
                   <input
                     type="number"
                     name="price"
@@ -92,6 +92,8 @@ const App = () => {
                       setPrice(e.target.value)
                     }
                   />
+                ) : (
+                  product.price
                 )}
               </td>
               <td>
