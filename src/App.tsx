@@ -24,6 +24,8 @@ const App = () => {
   };
   return (
     <div>
+      <h2>Products</h2>
+
       <table>
         <thead>
           <tr>
